@@ -1,4 +1,6 @@
 # vba-methods
+![Code size](https://img.shields.io/github/languages/code-size/monkeywithacupcake/vba-methods.svg)
+
 A collection of Subs and Functions to do things in Excel VBA For Microsoft Office 16. 
 
 Subs and Functions are saved as .vba files to ensure the repository language is correct. 

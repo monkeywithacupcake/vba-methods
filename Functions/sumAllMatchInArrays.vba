@@ -16,5 +16,5 @@ Function sumAllMatchInArrays(inArrs As Variant, lookupCol As Integer, returnCol 
             End If
         Next i
     Next a
-    sumAllMatch = oVal
+    sumAllMatchInArrays = oVal
 End Function

@@ -1,12 +1,11 @@
 # vba-methods
-Simple Functions to do things in Excel VBA For Microsoft Office 16. 
+A collection of Subs and Functions to do things in Excel VBA For Microsoft Office 16. 
 
 Functions are saved as .vba files to ensure the repository language is correct. 
 
 ## How to Contribute
 PRs and Issues welcome. Use Issues for questions. Use PRs for new functions.
-*Each file is a function*
-
+***Each file is a function***
 Please remember that beginners will use this code. 
 Add comments as needed.
 

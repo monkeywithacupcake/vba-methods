@@ -1,7 +1,8 @@
 # vba-methods
 A collection of Subs and Functions to do things in Excel VBA For Microsoft Office 16. 
 
-Functions are saved as .vba files to ensure the repository language is correct. 
+Subs and Functions are saved as .vba files to ensure the repository language is correct. 
+*What is the difference?* Generally, a Sub does a thing and a Function returns a thing. 
 
 ## How to Contribute
 PRs and Issues welcome. Use Issues for questions. Use PRs for new functions.

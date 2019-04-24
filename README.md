@@ -1,7 +1,22 @@
 # vba-methods
-Simple Functions to do things in Excel VBA
+Simple Functions to do things in Excel VBA For Microsoft Office 16. 
 
 Functions are saved as .vba files to ensure the repository language is correct. 
+
+## How to Contribute
+PRs and Issues welcome. Use Issues for questions. Use PRs for new functions.
+*Each file is a function*
+
+Please remember that beginners will use this code. 
+Add comments as needed.
+
+### Conventions
+We will try to use [VB Coding Standards](https://en.wikibooks.org/wiki/Visual_Basic/Coding_Standards) for consistency. 
+The big picture means to 
+- Use verb starts and camelCase for sub and function names. Like "getMoreFood()" and "returnLastCupcake()"
+- Use NounDescripter for variable names. 
+- there are a whole bunch of others
+
 
 ## How to Use
 You can copy and paste functions directly into your Visual Basic Windows.
@@ -27,23 +42,23 @@ End Function
 Then, you can call it in your other Sub
 
 ```vba
-Sub otherSub()
+Sub doOtherSub()
    Call printa
    Call printStr("I like Cupcakes")
    
    Debug.Print(getNextInt(4)) ' prints 5
    
    'You can also Dim and use variables
-   Dim myStrVar As String, myIntVar As Integer
-   myStrVar = "Do you like cupcakes?"
-   myIntVar = 12
+   Dim smyStrVar As String, imyIntVar As Integer
+   smyStrVar = "Do you like cupcakes?"
+   imyIntVar = 12
    
-   Call printStr(myStrVar)
-   Debug.Print(getNextInt(myIntVar)) 'prints 13
+   Call printStr(smyStrVar)
+   Debug.Print(getNextInt(imyIntVar)) 'prints 13
    
    ' You can write to variables with functions
-   Dim myNewInt As Integer
-   myNewInt = getNextInt(myIntVar) 'now, myNewInt is 13
+   Dim imyNewInt As Integer
+   imyNewInt = getNextInti(myIntVar) 'now, imyNewInt is 13
    
 End Sub
 ```

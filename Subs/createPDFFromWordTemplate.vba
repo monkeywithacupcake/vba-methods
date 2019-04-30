@@ -1,6 +1,7 @@
 Sub createPDFFromWordTemplate(pCount As Integer, t1Rng As Range, t2Rng As Range, wTmp As String, pOut As String)
     'this will NOT work out of the box, you must update
     'wTmp is a path to a Word Template FILE
+    'if you do not have access to the Custom Office Templates or must use a shared drive, use a docx instead of dotx. 
     'pOut is a path to a pdf Output DIRECTORY
     'assumption here that we want a number 'pCount' and we want two tables from a worksheet (t1Rng, t2Rng) 
     'the number and table will be placed at a bookmark in a Microsoft Word Template
@@ -8,6 +9,7 @@ Sub createPDFFromWordTemplate(pCount As Integer, t1Rng As Range, t2Rng As Range,
 
     Set wdApp = CreateObject("Word.Application")
     Set wd = wdApp.Documents.Add(Template:=wTmp, NewTemplate:=False, DocumentType:=wdNewBlankDocument) 'creates new from template
+            'Set wd = wdApp.Documents.Open(FileName:=wTmp)
     wdApp.Visible = True
 
     With wd
@@ -29,8 +31,10 @@ Sub createPDFFromWordTemplate(pCount As Integer, t1Rng As Range, t2Rng As Range,
        Next i
    
        .SaveAs (pOut & "newDocument" & Format(Now, "YYYYMMDD") & ".pdf"), 17
-       .Close SaveChanges:=False
+       
    
     End With
+    wdApp.NormalTemplate.Saved = True ' avoid it asking you
+    wd.Close SaveChanges:=False
     wdApp.Quit
 End Sub
